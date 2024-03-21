@@ -1,0 +1,95 @@
+module Tarea_2(
+    input rst,          // Reset de la FSM
+    input logic clk,    // Clock de la FSM
+    input logic M,      // Botón de mantenimiento
+    output logic [7:0] estado_reg // Registro de estado
+);
+
+// Declaración de parámetros
+localparam ESTADO_INICIO = 2'b00;
+localparam ESTADO_ESPERA = 2'b01;
+localparam ESTADO_ERROR = 2'b10;
+localparam ESTADO_CONTAR = 2'b11;
+
+// Declaración de variables
+logic [7:0] contador_ciclos;
+logic [7:0] contador_mantenimiento;
+logic [7:0] mux_salida;
+logic [1:0] estado_actual, estado_siguiente;
+logic [7:0] ciclo_actual;
+
+// FSM de control
+always_ff @(posedge clk or posedge rst)
+begin
+    if (rst)
+        estado_actual <= ESTADO_INICIO;
+    else
+        estado_actual <= estado_siguiente;
+end
+
+always_comb
+begin
+    case (estado_actual)
+        ESTADO_INICIO:
+            begin
+                estado_siguiente = M ? ESTADO_CONTAR : ESTADO_INICIO;
+            end
+        ESTADO_ESPERA:
+            begin
+                estado_siguiente = contador_ciclos == 8'hC8 ? ESTADO_ERROR : M ? ESTADO_CONTAR : ESTADO_ESPERA;
+            end
+        ESTADO_ERROR:
+            begin
+                estado_siguiente = rst ? ESTADO_INICIO : ESTADO_ERROR;
+            end
+        ESTADO_CONTAR:
+            begin
+                estado_siguiente = M ? ESTADO_CONTAR : ESTADO_INICIO;
+            end
+        default:
+            estado_siguiente = ESTADO_INICIO;
+    endcase
+end
+
+// Contador de ciclos
+always_ff @(posedge clk or posedge rst)
+begin
+    if (rst)
+        contador_ciclos <= 8'b0;
+    else if (estado_actual == ESTADO_ESPERA)
+        contador_ciclos <= contador_ciclos + 1;
+    else
+        contador_ciclos <= 8'b0;
+end
+
+// Comparador con valor de 200
+assign ciclo_actual = contador_ciclos;
+
+// Contador de mantenimiento
+always_ff @(posedge clk or posedge rst)
+begin
+    if (rst)
+        contador_mantenimiento <= 8'b0;
+    else if (estado_actual == ESTADO_CONTAR)
+        contador_mantenimiento <= contador_mantenimiento + 1;
+end
+
+// Mux con valor OxFF truncado
+always_comb
+begin
+    if (estado_actual == ESTADO_ERROR)
+        mux_salida = 8'hFF;
+    else
+        mux_salida = contador_mantenimiento;
+end
+
+// Regulador de estado
+always_ff @(posedge clk or posedge rst)
+begin
+    if (rst)
+        estado_reg <= 8'b0;
+    else
+        estado_reg <= mux_salida;
+end
+
+endmodule

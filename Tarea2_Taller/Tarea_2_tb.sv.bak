@@ -1,0 +1,48 @@
+module Tarea_2_tb;
+
+    // Parameters
+    localparam CLK_PERIOD = 10; // Clock period in simulation time units
+
+    // Signals
+    logic rst;
+    logic clk;
+    logic M;
+    logic [7:0] estado_reg;
+
+    // Instantiate the module under test
+    mantenimiento_control dut (
+        .rst(rst),
+        .clk(clk),
+        .M(M),
+        .estado_reg(estado_reg)
+    );
+
+    // Clock generation
+    always #((CLK_PERIOD)/2) clk = ~clk;
+
+    // Reset initialization
+    initial begin
+        rst = 1;
+        #10;
+        rst = 0;
+        #10;
+        // Test case 1: No maintenance button pressed
+        M = 0;
+        #2000; // Wait for 200 cycles
+        // Test case 2: Press maintenance button before 200 cycles
+        M = 1;
+        #1000;
+        M = 0;
+        #1000;
+        // Test case 3: Press maintenance button after 200 cycles
+        M = 0;
+        #2000;
+        M = 1;
+        #1000;
+        M = 0;
+        #1000;
+        // End simulation
+        $finish;
+    end
+
+endmodule
