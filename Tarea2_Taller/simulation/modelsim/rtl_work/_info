@@ -8,58 +8,58 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/ale-r/QuartusProjects/simulation/modelsim
+Z0 dC:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller/simulation/modelsim
 vTarea_2
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1711044537
+Z2 !s110 1711345089
 !i10b 1
 !s100 LNDjj1AH9fE`_gDJ0ejg=2
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I2OoBkIDfDWT`njklMzRZG1
+I@PKBf4JaQz<YBagTYQ[122
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1710967014
-8C:/Users/ale-r/QuartusProjects/Tarea_2.sv
-FC:/Users/ale-r/QuartusProjects/Tarea_2.sv
+w1711334623
+8C:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller/Tarea_2.sv
+FC:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller/Tarea_2.sv
 !i122 0
 L0 1 104
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1711044536.000000
-!s107 C:/Users/ale-r/QuartusProjects/Tarea_2.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/QuartusProjects|C:/Users/ale-r/QuartusProjects/Tarea_2.sv|
+Z6 !s108 1711345089.000000
+!s107 C:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller/Tarea_2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller|C:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller/Tarea_2.sv|
 !i113 1
-Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/Users/ale-r/QuartusProjects
-Z8 tCvgOpt 0
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller
+Z9 tCvgOpt 0
 n@tarea_2
 vTarea_2_tb
 R1
 R2
 !i10b 1
-!s100 FS02UYoGh4E[n>QSLdbSI3
+!s100 5X0EcBVNJc;;dMGcz<Yc]0
 R3
-IbQAQzZGbK1lMXO060^6A42
+IJ63J0D1PVGhJ_NQIn:;Mh1
 R4
 S1
 R0
-w1711044461
-8C:/Users/ale-r/QuartusProjects/Tarea_2_tb.sv
-FC:/Users/ale-r/QuartusProjects/Tarea_2_tb.sv
+w1711345038
+8C:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller/Tarea_2_tb.sv
+FC:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller/Tarea_2_tb.sv
 !i122 1
-L0 1 63
+L0 1 61
 R5
 r1
 !s85 0
 31
-!s108 1711044537.000000
-!s107 C:/Users/ale-r/QuartusProjects/Tarea_2_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/QuartusProjects|C:/Users/ale-r/QuartusProjects/Tarea_2_tb.sv|
-!i113 1
 R6
+!s107 C:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller/Tarea_2_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller|C:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller/Tarea_2_tb.sv|
+!i113 1
 R7
 R8
+R9
 n@tarea_2_tb

@@ -1,6 +1,6 @@
 Analysis & Elaboration report for Tarea_2
-Thu Mar 21 12:04:04 2024
-Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Sun Mar 24 23:37:24 2024
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -34,22 +34,22 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                 ;
-+-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Mar 21 12:04:04 2024          ;
-; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
-; Revision Name                 ; Tarea_2                                        ;
-; Top-level Entity Name         ; Tarea_2                                        ;
-; Family                        ; Cyclone V                                      ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
-; Total registers               ; N/A until Partition Merge                      ;
-; Total pins                    ; N/A until Partition Merge                      ;
-; Total virtual pins            ; N/A until Partition Merge                      ;
-; Total block memory bits       ; N/A until Partition Merge                      ;
-; Total PLLs                    ; N/A until Partition Merge                      ;
-; Total DLLs                    ; N/A until Partition Merge                      ;
-+-------------------------------+------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Sun Mar 24 23:37:24 2024       ;
+; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                 ; Tarea_2                                     ;
+; Top-level Entity Name         ; Tarea_2                                     ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
 
 
 +------------------------------------------+
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 12          ;
-; Maximum allowed            ; 10          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -160,23 +160,23 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Thu Mar 21 12:03:39 2024
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Sun Mar 24 23:37:18 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Tarea_2 -c Tarea_2 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file tarea_2.sv
-    Info (12023): Found entity 1: Tarea_2 File: C:/Users/ale-r/QuartusProjects/Tarea_2.sv Line: 1
+    Info (12023): Found entity 1: Tarea_2 File: C:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller/Tarea_2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tarea_2_tb.sv
-    Info (12023): Found entity 1: tb_Tarea_2 File: C:/Users/ale-r/QuartusProjects/Tarea_2_tb.sv Line: 1
+    Info (12023): Found entity 1: Tarea_2_tb File: C:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller/Tarea_2_tb.sv Line: 1
 Info (12127): Elaborating entity "Tarea_2" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at Tarea_2.sv(75): truncated value with size 32 to match size of target (8) File: C:/Users/ale-r/QuartusProjects/Tarea_2.sv Line: 75
-Info (10264): Verilog HDL Case Statement information at Tarea_2.sv(71): all case item expressions in this case statement are onehot File: C:/Users/ale-r/QuartusProjects/Tarea_2.sv Line: 71
-Warning (10230): Verilog HDL assignment warning at Tarea_2.sv(89): truncated value with size 32 to match size of target (8) File: C:/Users/ale-r/QuartusProjects/Tarea_2.sv Line: 89
+Warning (10230): Verilog HDL assignment warning at Tarea_2.sv(75): truncated value with size 32 to match size of target (8) File: C:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller/Tarea_2.sv Line: 75
+Info (10264): Verilog HDL Case Statement information at Tarea_2.sv(71): all case item expressions in this case statement are onehot File: C:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller/Tarea_2.sv Line: 71
+Warning (10230): Verilog HDL assignment warning at Tarea_2.sv(89): truncated value with size 32 to match size of target (8) File: C:/Users/nicva/PycharmProjects/Tarea2_TallerDigital/Tarea2_Taller/Tarea_2.sv Line: 89
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4788 megabytes
-    Info: Processing ended: Thu Mar 21 12:04:04 2024
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 4770 megabytes
+    Info: Processing ended: Sun Mar 24 23:37:24 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:08
 
 

@@ -17,7 +17,7 @@ module Tarea_2_tb();
     );
 
     // Clock generation
-    always #5 clk = ~clk;
+    always #10 clk = ~clk;
 
     // Initialize inputs
     initial begin
@@ -29,7 +29,7 @@ module Tarea_2_tb();
         #10 rst = 0;
         
         // Case 1: No maintenance button press
-        #210; // Wait for 200 cycles
+        #60; // Wait for 200 cycles
         // Check estado_reg for 0xFF
         $display("Case 1: Estado del registro: %h", estado_reg);
         
@@ -47,7 +47,7 @@ module Tarea_2_tb();
         rst = 1;
         #10 rst = 0;
         // Wait for 200 cycles
-        #210;
+        #60;
         M = 1; // Press maintenance button
         #10; // Wait for one clock cycle
         M = 0; // Release maintenance button
@@ -55,9 +55,7 @@ module Tarea_2_tb();
         repeat(3) @(posedge clk);
         // Check estado_reg for 0xFF
         $display("Case 3: Estado del registro: %h", estado_reg);
-        
-        // End simulation
-        $finish;
+
     end
 
 endmodule
